@@ -8,7 +8,7 @@ import org.joda.time.DateTime
 import org.numenta.nupic.encoders.DateEncoder._
 
 
-object SenseStream {
+object SensorStream {
   case class SensorData(timestamp: DateTime, data: Double)
 
   def main(args: Array[String]) {

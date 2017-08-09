@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SenseStream.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/intellisense/SenseStream.scala">
+      <file leaf-file-name="SensorStream.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/intellisense/SensorStream.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
                 <element signature="e#22#70#0" expanded="true" />
               </folding>
@@ -30,7 +30,7 @@
             <state relative-caret-position="216">
               <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
               <folding>
-                <element signature="e#22#64#0" expanded="true" />
+                <element signature="e#22#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,6 +60,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/intellisense/SenseStream.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/intellisense/SensorDataSinkFunction.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/intellisense/SensorStream.scala" />
       </list>
     </option>
   </component>
@@ -151,7 +152,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="intellisense.SenseStream" />
+      <option name="MAIN_CLASS_NAME" value="intellisense.SensorStream" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/data.csv" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -265,12 +266,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1502285925430</updated>
-      <workItem from="1502285927070" duration="2031000" />
+      <workItem from="1502285927070" duration="2454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2031000" />
+    <option name="totallyTimeSpent" value="2454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1303" height="772" extended-state="6" />
@@ -354,15 +355,15 @@
         <state relative-caret-position="216">
           <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
           <folding>
-            <element signature="e#22#64#0" expanded="true" />
+            <element signature="e#22#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/intellisense/SenseStream.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/intellisense/SensorStream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="e#22#70#0" expanded="true" />
           </folding>

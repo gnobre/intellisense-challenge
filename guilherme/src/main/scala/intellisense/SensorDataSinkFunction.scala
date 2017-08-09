@@ -1,6 +1,6 @@
 package intellisense
 
-import intellisense.SenseStream.SensorData
+import intellisense.SensorStream.SensorData
 import org.apache.flink.api.common.functions.RuntimeContext
 import org.apache.flink.streaming.connectors.elasticsearch.{ElasticsearchSinkFunction, RequestIndexer}
 import org.elasticsearch.action.index.IndexRequest
