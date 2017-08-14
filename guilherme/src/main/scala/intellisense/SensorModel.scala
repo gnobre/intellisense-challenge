@@ -1,11 +1,6 @@
 package intellisense
 
 import org.joda.time.DateTime
-import org.numenta.nupic.Parameters.KEY
-import org.numenta.nupic.algorithms.{Anomaly, SpatialPooler, TemporalMemory}
-import org.numenta.nupic.encoders.scala.{DateEncoder, MultiEncoder, ScalarEncoder}
-import org.numenta.nupic.flink.streaming.examples.common.NetworkDemoParameters
-import org.numenta.nupic.network.Network
 
 trait SensorModel {
   val fields: List[String] = List("bed_height", "bed_pressure", "clear_water_height",
