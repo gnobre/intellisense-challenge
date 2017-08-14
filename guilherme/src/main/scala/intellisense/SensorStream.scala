@@ -47,7 +47,6 @@ object SensorStream extends SensorModel {
     }
 
     // Reading input from CSV as data stream
-    var header = true
     val input: DataStream[SensorData] = env.readTextFile(path).map(
       line => {
         var values = line.split(',')
@@ -58,9 +57,13 @@ object SensorStream extends SensorModel {
       })
       .filter {
         values => {
-          val isValue = !header
-          header = false
-          isValue
+          var isHeader = false
+          try {
+            values(0).toInt
+          } catch {
+            case _: Throwable => isHeader = true
+          }
+          !isHeader
         }
       }
       .map { values => {SensorData(values(0).toInt,
