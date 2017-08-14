@@ -18,7 +18,7 @@ class SensorDataSinkFunction extends ElasticsearchSinkFunction[Prediction] {
 
     val request: IndexRequest = Requests.indexRequest
       .index("sensor_data")
-      .`type`("record")
+      .`type`(record.type_es)
       .source(json)
 
     indexer.add(request)
