@@ -29,7 +29,16 @@ object SensorStream extends SensorModel {
   }
 
   def main(args: Array[String]) {
-    val path = args(0)
+    var path = ""
+    var cluster = ""
+    var ip = ""
+    var port = 0
+    args.sliding(2, 2).toList.collect {
+      case Array("--path", argPath: String) => path = argPath
+      case Array("--cluster", argCluster: String) => cluster = argCluster
+      case Array("--ip", argIP: String) => ip = argIP
+      case Array("--port", argPort: String) => port = argPort.toInt
+    }
     val env = {
       val env = StreamExecutionEnvironment.getExecutionEnvironment
       env.setParallelism(1)
@@ -78,11 +87,11 @@ object SensorStream extends SensorModel {
 
     // Configuring elasticsearch sink
     val config = new java.util.HashMap[String, String]
-    config.put("cluster.name", "intellisense")
+    config.put("cluster.name", cluster)
     config.put("bulk.flush.max.actions", "1")
 
     val transportAddresses = new java.util.ArrayList[InetSocketAddress]
-    transportAddresses.add(new InetSocketAddress(InetAddress.getByName("127.0.0.1"), 9300))
+    transportAddresses.add(new InetSocketAddress(InetAddress.getByName(ip), port))
 
 
     // Anomaly detection
@@ -91,7 +100,7 @@ object SensorStream extends SensorModel {
         .learn((key: AnyRef) => {
           val encoder = MultiEncoder(
             DateEncoder().name("timestamp").timeOfDay(21, 9.5),
-            ScalarEncoder().name(field).n(50).w(21).maxVal(Double.MaxValue).resolution(0.1).clipInput(true)
+            ScalarEncoder().name(field).n(50).w(21).minVal(Double.MinValue).maxVal(Double.MaxValue).resolution(0.1).clipInput(true)
           )
 
           val params = NetworkDemoParameters.params
